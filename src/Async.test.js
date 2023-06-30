@@ -8,7 +8,6 @@ describe('Async component', () => {
             json: async ()=> [{id:'p1',title:'First post'}]
         })
       render(<Async />)
-  
       const listItemElements = await screen.findAllByRole('listitem');
       expect(listItemElements).not.toHaveLength(0);
     });
